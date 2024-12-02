@@ -17,10 +17,13 @@ jobs:
           bun-version: latest
       - run: bun install
       - run: bun run build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: deployment-artifact
+          path: dist
       - uses: actions/deploy-pages@v2
         with:
-          branch: gh-pages
-          folder: dist
+          artifact_name: deployment-artifact
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
