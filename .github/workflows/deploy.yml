@@ -14,7 +14,7 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-      - run: bun install && bun build
+      - run: bun install && bun run build
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
