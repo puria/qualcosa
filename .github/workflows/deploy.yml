@@ -35,10 +35,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: latest
-      - run: npm install -g semantic-release @semantic-release/exec
+      - run: npm install -g semantic-release
+      - run: semantic-release 
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          semantic-release \
-            --plugins @semantic-release/exec \
-            --exec-publish "cp dist/index.html release.html && gh release upload $GITHUB_REF_NAME release.html"
