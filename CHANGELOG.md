@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/puria/qualcosa/compare/v1.0.0...v1.0.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* mi piace andare in giro di notte ([f5a7feb](https://github.com/puria/qualcosa/commit/f5a7feb510b21546cb95abc72cf9f995d355c5f8))
+
 # 1.0.0 (2024-12-02)
 
 
