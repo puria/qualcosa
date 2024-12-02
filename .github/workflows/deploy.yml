@@ -2,16 +2,25 @@ name: Deploy and Release
 on:
   push:
     branches:
-      - main
+      - [$default-branch]
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 permissions:
   pages: write
   id-token: write
-  contents: write
+  contents: read
 jobs:
   deploy-and-release:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
@@ -19,11 +28,9 @@ jobs:
       - run: bun run build
       - uses: actions/upload-artifact@v3
         with:
-          name: deployment-artifact
           path: dist
-      - uses: actions/deploy-pages@v2
-        with:
-          artifact_name: deployment-artifact
+      - uses: actions/deploy-pages@v4
+        id: deployment
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
