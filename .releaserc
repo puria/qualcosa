@@ -4,6 +4,7 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
+    "@semantic-release/npm",
     "@semantic-release/changelog",
     [
       "@semantic-release/git",
@@ -21,8 +22,7 @@
       {
         "assets": ["release.html"]
       }
-    ],
-    "@semantic-release/npm"
+    ]
   ]
 }
 
