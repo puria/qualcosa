@@ -8,7 +8,7 @@
     [
       "@semantic-release/github",
       {
-        "assets": ["pqspread.html"]
+        "assets": ["release.html"]
       }
     ],
     "@semantic-release/npm"
