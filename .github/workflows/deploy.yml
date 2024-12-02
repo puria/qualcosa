@@ -2,7 +2,7 @@ name: Deploy and Release
 on:
   push:
     branches:
-      - [$default-branch]
+      - main
 
 concurrency:
   group: "pages"
