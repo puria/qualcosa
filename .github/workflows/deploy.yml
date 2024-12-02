@@ -36,6 +36,7 @@ jobs:
         with:
           node-version: latest
       - run: npm install -g semantic-release
+      - run: npm add @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/git @semantic-release/github
       - run: semantic-release 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
