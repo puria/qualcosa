@@ -1,0 +1,17 @@
+{
+  "branches": ["main"],
+  "repositoryUrl": "https://github.com/your-username/your-repo-name",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/github",
+      {
+        "assets": ["pqspread.html"]
+      }
+    ],
+    "@semantic-release/npm"
+  ]
+}
+
