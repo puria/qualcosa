@@ -34,7 +34,7 @@ jobs:
         id: deployment
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: latest
       - run: npm install -g semantic-release @semantic-release/exec
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
