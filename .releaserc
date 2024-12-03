@@ -1,6 +1,6 @@
 {
   "branches": ["main"],
-  "repositoryUrl": "git@github.com:puria/qualcosa.git",
+  "repositoryUrl": "https://github.com/puria/qualcosa",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
