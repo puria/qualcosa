@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/puria/qualcosa/compare/v1.0.0...v1.0.1) (2024-12-03)
+
+
+### Bug Fixes
+
+* use git ([6f6e60f](https://github.com/puria/qualcosa/commit/6f6e60f7863fa83585b9afe941269ddf074e93c8))
+
 # 1.0.0 (2024-12-03)
 
 
